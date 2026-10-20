@@ -57,3 +57,4 @@ The default `Terminal` theme uses the terminal's own foreground, background, and
 
 - [Architecture and implementation notes](docs/ARCHITECTURE.md)
 - [AI agent operating guide](AGENTS.md)
+- [MIT License](LICENSE)
