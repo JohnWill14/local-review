@@ -1,0 +1,7 @@
+FROM docker.io/library/rust:1.96-bookworm
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential cmake pkg-config perl git ca-certificates libssl-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
