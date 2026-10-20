@@ -18,6 +18,10 @@ cargo test
 
 The Podman build writes the executable to `release/local-review` and does not install Rust dependencies on the host.
 
+## GitHub release automation
+
+`.github/workflows/release.yml` builds native Linux x86_64 and Windows x86_64 binaries for every pushed `v*` tag. It runs tests, generates `SHA256SUMS`, and attaches assets to a pre-release. For an already-created tag, use the **Run workflow** action with the tag name; do not move or recreate a published tag to retrigger a build.
+
 ## Run the executable
 
 ```sh

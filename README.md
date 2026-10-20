@@ -15,6 +15,15 @@ The release build runs in Podman. The host receives only `release/local-review`.
 
 The generated binary targets Linux on the container/host architecture. Building native macOS or Windows binaries requires runners and SDKs for those platforms.
 
+## GitHub releases
+
+GitHub Actions builds native x86_64 assets for Linux and Windows whenever a `v*` tag is pushed. The workflow runs tests, attaches both executables and `SHA256SUMS` to a pre-release, and uses these asset names:
+
+- `local-review-v<version>-x86_64-unknown-linux-gnu`
+- `local-review-v<version>-x86_64-pc-windows-msvc.exe`
+
+For a tag that already exists, run **Actions → Release → Run workflow**, enter the tag (for example, `v0.1.0`), and the workflow will attach assets to the existing draft or release. Verify checksums before distributing downloads.
+
 ## Usage
 
 ```sh
