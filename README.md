@@ -2,6 +2,8 @@
 
 Local Review is a local-first terminal UI for reviewing Git branches. It reads Git history and working-tree changes, but never commits, stages, pushes, or modifies files in the repository under review.
 
+> **Experimental software — pre-alpha status.** Local Review is an early testing project and is not production-ready or a beta release. Use it only at your own risk, verify its output independently, and keep appropriate backups before relying on it for any review, workflow, or decision.
+
 ## Build without installing Rust on the host
 
 The release build runs in Podman. The host receives only `release/local-review`.
